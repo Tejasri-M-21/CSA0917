@@ -1,15 +1,14 @@
-import java.util.Scanner;
-public class Main {
-public static void main(String[] args) {
-Scanner sc = new Scanner(System.in);
-int age = sc.nextInt();
-if (age >= 18) {
-System.out.println("Eligible for voting");
-} else {
-int yearsLeft = 18 age;
-System.out.println("Not eligible for voting");
-System.out.println("Years left: "+ yearsleft);
-}
-sc.close();
-}
-}
+BEGIN
+    NUMBER age
+    NUMBER voting_age = 18
+    NUMBER years_left
+    OUTPUT "Enter your age:"
+    INPUT age
+    IF age >= voting_age THEN
+        OUTPUT "You are eligible to vote."
+    ELSE
+        years_left = voting_age - age
+        OUTPUT "You are not eligible to vote."
+        OUTPUT "Years left to become eligible: ", years_left
+    END IF
+END
