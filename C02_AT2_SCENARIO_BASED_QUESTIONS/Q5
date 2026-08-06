@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine().trim();
+        s = s.replace("{", "").replace("}", "").trim();
+        if (s.isEmpty()) {
+            System.out.print("Balance=0 Deposits=0 Withdrawals=0");
+            return;
+        }
+        String[] parts = s.split(",");
+        int balance = 0;
+        int deposits = 0;
+        int withdrawals = 0;
+        for (String p : parts) {
+            int x = Integer.parseInt(p.trim());
+            balance += x;
+            if (x > 0) deposits++;
+            else if (x < 0) withdrawals++;
+        }
+        System.out.print("Balance=" + balance + " Deposits=" + deposits + " Withdrawals=" + withdrawals);
+    }
+}
