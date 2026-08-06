@@ -1,0 +1,30 @@
+SYSTEM DESIGN
+
+1) System Architecture
+The proposed system utilizes a modular, multi-layered architecture to ensure seamless integration of real-time computer vision, drone telemetry, and automated spraying mechanisms.
+
+	* Perception Layer: Utilizes the YOLO (You Only Look Once) object detection model via the OpenCV Java DNN module to process real-time camera feeds and identify weed locations.
+	* Communication Layer: Implements low-latency data exchange between the drone and the controller using Java DatagramSocket (UDP) to handle high-frequency telemetry and command packets.
+	* Control & Logic Layer: Employs the State Machine Pattern to manage flight states (e.g., TAKEOFF, SCAN, SPRAY, RTL) and the Strategy Pattern to switch dynamically between different spraying modes (e.g., targeted spot-spraying vs. broadcast spraying).
+	* Navigation Layer: Integrates GPS telemetry to map detected weed coordinates to physical field locations, generating optimized flight paths for efficient coverage.
+	* Actuation Layer: Interfaces with the drone's hardware to trigger the spraying mechanism precisely when the drone reaches a target coordinate.
+
+2) Datasets
+To ensure high accuracy in weed detection, the system relies on a robust data pipeline:
+
+	* Primary Vision Dataset: A diverse collection of high-resolution images containing various crop types and common weed species, annotated for YOLO training.
+	* Telemetry Data: Historical logs of GPS coordinates, altitude, and drone velocity used to calibrate navigation algorithms and simulate flight paths.
+	* Data Augmentation & Preprocessing: To improve model robustness against varying field conditions, the dataset undergoes augmentation (rotation, brightness adjustment, and scaling) and normalization to ensure consistent input for the OpenCV DNN module.
+	* Validation Protocol: The dataset is partitioned into Training (70%), Validation (15%), and Testing (15%) sets to rigorously evaluate the precision and recall of the detection model.
+
+3) System Modules / Workflow
+The system operates through the following coordinated modules:
+
+	* Module A (Data Acquisition): Captures live video frames and sensor telemetry via UDP.
+	* Module B (Intelligence Engine): Executes the YOLO model to detect weeds and calculate confidence scores.
+	* Module C (Path Planner): Translates detections into a sequence of GPS waypoints, optimizing the route to minimize battery consumption.
+	* Module D (Flight Controller): Executes the State Machine logic to transition the drone through its mission lifecycle.
+	* Module E (Precision Actuator): Manages the spray timing and volume based on the detection outputs and current GPS position.
+
+Summary
+This design provides a scalable and modular framework. By decoupling the detection logic from the flight control and spraying mechanics, the system remains flexible for future upgrades, such as incorporating obstacle avoidance or multi-drone swarm intelligence.
