@@ -1,0 +1,46 @@
+Paper 1: IoT-Based Smart Indoor Air Quality Monitoring Using CO₂ Sensors
+
+	* Methodology: CO₂ sensor + IoT dashboard for real-time monitoring
+	* Advantages: Real-time data; easy visualization
+	* Limitations: Sensor drift; accuracy depends on calibration
+	* Research gap: Long-term self-compensation to reduce drift impact
+
+Paper 2: Calibration and Performance Evaluation of Low-Cost CO₂ Sensors
+
+	* Methodology: Compare low-cost CO₂ sensors with reference instruments; use calibration approach
+	* Advantages: Improves reliability; explains error sources
+	* Limitations: Calibration can be time-consuming and manual
+	* Research gap: Auto/less frequent calibration with adaptive correction
+
+Paper 3: Machine Learning for CO₂ Concentration Prediction in Smart Buildings
+
+	* Methodology: ML/time-series prediction using CO₂ + related signals (temperature/occupancy patterns)
+	* Advantages: Predicts CO₂ trends; enables proactive control
+	* Limitations: Needs sufficient training data; depends on building type
+	* Research gap: Combine prediction with ventilation rules + handle occupancy uncertainty
+
+Paper 4: Real-Time Anomaly Detection for Indoor Air Quality
+
+	* Methodology: Detect unusual CO₂ spikes using streaming analytics/thresholding/ML
+	* Advantages: Quick detection of harmful air quality episodes
+	* Limitations: False alarms can occur due to sensor noise
+	* Research gap: Robust anomaly detection considering noise and sensor drift
+
+Paper 5: Energy-Efficient Ventilation Control Based on CO₂ Monitoring
+
+	* Methodology: HVAC/ventilation control using CO₂ feedback to optimize energy
+	* Advantages: Maintains air quality while saving energy
+	* Limitations: Performance varies with HVAC system; measurement accuracy critical
+	* Research gap: Scalable control logic + improved CO₂ measurement compensation
+
+Common Overall Research Gaps
+
+	* Low-cost CO₂ sensors have drift and bias
+	* Need better calibration/compensation with minimal manual effort
+	* Need integrated solution: sensing + prediction/anomaly detection + control/alerts
+
+Conclusion for Your Project
+
+	* Use IoT monitoring as base
+	* Improve accuracy using calibration/compensation
+	* Add real-time decision support using prediction/anomaly/alerts
