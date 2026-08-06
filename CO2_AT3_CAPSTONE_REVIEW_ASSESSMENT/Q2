@@ -1,0 +1,57 @@
+Existing System Analysis
+1) Existing System
+In the existing agricultural weed-management systems, weed control is largely performed using manual inspection and conventional spraying. Farmers/workers visually inspect crop fields to identify weed patches and then apply pesticides using handheld or uniform field-spraying methods. In some cases, drones are used only for general field monitoring, such as capturing images for inspection, but they typically do not perform full automation such as real-time weed detection + GPS-based weed localization + route planning + automated targeted spraying.
+
+Even when drone-based monitoring exists, most systems rely on post-processing or provide only basic information. The decision of where to spray is still manual, and pesticides may still be applied in a non-targeted manner (uniform or semi-uniform spraying over an area).
+
+2) Limitations of the Existing System (At least 3)
+a) Manual Weed Identification (Time-consuming & labour intensive)
+Manual weed detection is slow and requires continuous human effort. For large farms, inspection becomes inaccurate due to fatigue and inconsistent observation.
+
+b) Excessive / Non-targeted Pesticide Usage
+Conventional spraying often treats the entire area rather than only weed-affected regions. This leads to unnecessary chemical usage, higher cost, and possible environmental damage.
+
+c) Lack of Real-Time Detection and Automated Action
+Many existing systems do not detect weeds and trigger spraying immediately. Detection may occur after the field scan, and pesticide application is done separately, increasing operational delay.
+
+d) Limited Accuracy in Weed Localization
+When weeds are detected visually, exact coordinates of weed patches may not be captured. Even with drone monitoring, many systems lack precise GPS mapping for spray-target points.
+
+e) No Effective Route Optimization
+Existing systems do not calculate the best travel path based on weed locations. As a result, the drone may waste time and energy covering unnecessary areas.
+
+f) Limited Multi-Drone Coordination
+Most existing solutions are designed for a single drone or do not coordinate multiple drones effectively. This reduces coverage efficiency and increases completion time.
+
+3) Challenges in the Existing System
+The major challenges include:
+
+	* Accurate weed detection under changing lighting, soil background, and crop similarity
+	* Efficient coverage of large agricultural fields
+	* Reducing unnecessary pesticide application while maintaining weed control effectiveness
+	* Translating detected weeds into precise target locations using GPS
+	* Reliable drone communication for continuous monitoring and control
+	* Planning efficient drone movement paths and synchronized operations (especially for multiple drones)
+
+4) Justification / Need for the Proposed Solution
+Because the existing methods are mostly manual and non-targeted, there is a clear need for an automated precision-based system. The proposed system addresses these issues by integrating:
+
+	* Real-time weed detection (YOLO-based model) from drone camera input
+	* GPS-based weed localization to identify exact coordinates for spraying
+	* Route optimization to reduce flight time and improve coverage efficiency
+	* Automated targeted spraying (spray actuator activates only at weed points)
+	* Optional multi-drone coordination to scale operations and reduce total completion time
+
+5) Comparison Summary (Existing vs Proposed)
+| Feature | Existing System | Proposed System |
+|---|---|---|
+| Weed detection | Manual/after inspection | Real-time AI detection (YOLO) |
+| Spraying approach | Uniform/non-targeted | Targeted spot spraying |
+| Labor requirement | High | Reduced |
+| Decision time | Delayed | Immediate detection-to-action |
+| Localization | Limited accuracy | GPS-guided precise targeting |
+| Efficiency | Low due to random coverage | Route optimization for reduced movement |
+| Scalability | Often single-drone | Multi-drone support possible |
+
+Conclusion
+Overall, the existing agricultural weed management systems suffer from manual dependency, excessive pesticide usage, lack of real-time automation, and weak targeting efficiency. Hence, an AI-enabled precision drone spraying solution is necessary to achieve accurate weed control, lower chemical consumption, reduced labour cost, and improved operational efficiency.
