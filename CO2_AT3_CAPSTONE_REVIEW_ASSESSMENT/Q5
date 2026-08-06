@@ -1,0 +1,88 @@
+Project Planning & Presentation 
+
+Project Implementation Plan (Module Breakdown):
+	1. Requirements & Scope Finalization (Week 1):
+		* Collect and confirm CO₂ AT3 capstone requirements
+		* Define user roles, functional requirements, constraints, and success criteria
+	2. Existing System Analysis (Week 2):
+		* Study current/related solutions
+		* Identify gaps and define improvement points
+		* Decide what features the proposed system will include
+	3. System Design & Architecture (Week 3–4):
+		* Finalize system architecture and data flow
+		* Create UML diagrams: Use Case, Class, and Sequence diagrams
+		* Define database schema and APIs/endpoints
+	4. Technology Stack Setup (Week 3–4):
+		* Initialize repository and project structure
+		* Configure Java IDE (Eclipse/IntelliJ), build setup, and dependencies
+		* Prepare MySQL database and JDBC connectivity
+	5. Module Development (Week 5–7):
+		* Implement modules for data capture/input, validation, and storage
+		* Develop processing/calculation logic
+		* Implement module-wise unit testing and bug fixes
+	6. Integration & UI Implementation (Week 8):
+		* Integrate backend modules end-to-end
+		* Create/refine UI screens (forms, dashboards, and reports/output views)
+		* Validate full workflow from input → processing → results
+	7. Testing & Validation (Week 9):
+		* Perform functional testing, edge-case testing, and regression testing
+		* Verify database persistence, correctness of results, and usability
+		* Improve performance and reliability based on test outcomes
+	8. Final Documentation & Presentation Preparation (Week 10):
+		* Prepare final report, diagrams, and documentation
+		* Create presentation slides and demo workflow
+		* Final review and submission
+
+Gantt Chart (Expected Timeline):
+
+	* Week 1: Requirements & Scope Finalization
+	* Week 2: Existing System Analysis
+	* Week 3–4: System Design + Technology Stack Setup
+	* Week 5–7: Module Development
+	* Week 8: Integration & UI Implementation
+	* Week 9: Testing & Validation
+	* Week 10: Documentation + Final Demo
+
+Technology Stack:
+
+	* Java (main application)
+	* IDE: Eclipse/IntelliJ
+	* JDBC (database connectivity)
+	* SQL / MySQL (data storage)
+	* Git/GitHub (version control)
+	* HTML/CSS/Bootstrap (if web UI is used)
+	* UML tools (optional)
+
+Expected Timeline & Milestones:
+
+	* End of Week 2: Requirements + analysis complete
+	* End of Week 4: System design + database + modules ready for coding
+	* End of Week 7: Core functionality completed
+	* End of Week 9: System tested and validated
+	* End of Week 10: Final demo + report submission
+
+Initial Prototype (if available):
+
+	* Basic input flow for CO₂-related data
+	* Core processing/calculation and validation logic
+	* Database persistence for storing inputs and generated outputs
+	* Preliminary UI screens for data entry and viewing results
+
+Future Work:
+
+	* Add advanced analytics (trend graphs, predictions/insights)
+	* Enhance dashboards and reporting for better user experience
+	* Add role-based access (Admin/User/Viewer)
+	* Provide export features (PDF/CSV)
+	* If applicable, integrate external sensors/APIs in later versions
+
+Response to Review Committee Questions (Brief):
+
+	* How will you measure success?
+By verifying accurate processing results, successful database storage, correct UI workflow, and successful end-to-end demo after testing.
+
+	* What risk do you foresee?
+Data accuracy issues, integration delays, and UI responsiveness—mitigated through frequent testing, modular development, and early integration.
+
+	* Why this architecture?
+It ensures modularity, easier testing, maintainability, and allows future upgrades without major redesign.
