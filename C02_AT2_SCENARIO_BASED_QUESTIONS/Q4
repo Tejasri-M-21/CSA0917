@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.parseInt(sc.nextLine().trim());
+        String[] names = new String[n];
+        for (int i = 0; i < n; i++) {
+            names[i] = sc.nextLine().trim();
+        }
+        LinkedHashMap<String, Integer> countMap = new LinkedHashMap<>();
+        for (String name : names) {
+            countMap.put(name, countMap.getOrDefault(name, 0) + 1);
+        }
+        StringBuilder result = new StringBuilder();
+        for (Map.Entry<String, Integer> entry : countMap.entrySet()) {
+            if (entry.getValue() > 1) {
+                result.append(entry.getKey())
+                      .append("=")
+                      .append(entry.getValue())
+                      .append(" ");
+            }
+        }
+        System.out.println(result.toString().trim());
+    }
+}
