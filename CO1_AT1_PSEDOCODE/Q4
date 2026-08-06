@@ -1,0 +1,23 @@
+BEGIN
+READ empNo
+READ empName
+READ salary
+IF salary < 500000 THEN
+tax = 0
+ELSE IF salary >= 500000 AND salary < 750000 THEN
+tax salary 5/100
+ELSE IF salary >= 750000 AND salary < 1000000 THEN
+tax salary 7.5/100
+ELSE IF salary >> 1000000 AND salary < 1500000 THEN
+tax salary 10/100
+ELSE IF salary >= 1500000 AND salary < 2000000 THEN
+tax salary 15/100
+ELSE IF salary > 2000000 THEN
+tax = salary 20 / 100
+END IF
+PRINT "Employee Number: empNo"
+PRINT "Employee Name : empName"
+PRINT "Salary+ salary"
+Run
+PRINT "Income Tax tax"
+END
