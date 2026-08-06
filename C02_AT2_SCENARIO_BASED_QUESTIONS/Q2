@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);  
+        if (!sc.hasNextLine()) {
+            return;
+        }
+        String attendance = sc.nextLine();
+        int present = 0;
+        int absent = 0;
+        // Count P and A
+        for (int i = 0; i < attendance.length(); i++) {
+            char ch = attendance.charAt(i);
+            if (ch == 'P') {
+                present++;
+            } else if (ch == 'A') {
+                absent++;
+            }
+        }
+        int total = present + absent;
+        if (total == 0) {
+            System.out.println("Present=0 Absent=0 Attendance=0%");
+            return;
+        }
+        double percentage = ((double) present / total) * 100;
+        StringBuilder result = new StringBuilder();
+        result.append("Present=").append(present)
+              .append(" Absent=").append(absent)
+              .append(" Attendance=").append((int) percentage).append("%");
+        if (percentage < 75) {
+            result.append(" Not Eligible");
+        }
+        System.out.println(result.toString());
+    }
+}
