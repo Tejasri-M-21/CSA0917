@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class NOCOM {
+    static boolean isComposite(int x) {
+        if (x <= 1) {
+            return false;
+        }
+        if (x == 2) {
+            return true;
+        }
+        for (int i = 2; i * i <= x; i++) {
+            if (x % i == 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            int a = sc.nextInt();
+            if (isComposite(a)) {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
