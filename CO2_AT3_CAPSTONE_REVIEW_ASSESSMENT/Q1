@@ -1,1 +1,79 @@
+DELIVERABLE 1: PROJECT PROPOSAL DOCUMENT
 
+1. PROJECT TITLE
+Automated Precision Spraying Drone Swarm with Real-Time Weed Detection Using YOLO Object Detection and GPS-Guided Route Optimization
+
+2. INTRODUCTION
+Weed management is a critical challenge in modern agriculture. Traditional methods often rely on manual identification and blanket spraying of pesticides, which is labor-intensive and chemically inefficient.
+
+This project proposes an automated drone swarm system that utilizes YOLO (You Only Look Once) object detection to identify weeds via camera feeds and employs GPS-guided navigation to reach specific target areas. By using an automated spray actuator for precision application, the system minimizes waste. A swarm-based approach ensures high field coverage and reduced operational time.
+
+3. PROBLEM STATEMENT
+Current agricultural spraying methods are often inefficient due to:
+
+	* High Labor Costs: Manual weed detection is time-consuming.
+	* Chemical Wastage: Uniform spraying leads to unnecessary pesticide use on healthy crops.
+	* Inefficiency: Large-scale fields are difficult to inspect manually.
+	* Scalability Issues: A single drone or operator cannot cover vast areas quickly.
+	* Coordination Complexity: Managing multiple autonomous units in real-time is a significant technical challenge.
+
+4. OBJECTIVES
+
+	* To automate weed detection using the YOLO algorithm.
+	* To implement real-time image processing via OpenCV DNN.
+	* To achieve precise weed localization using GPS coordinates.
+	* To optimize drone flight paths for maximum efficiency.
+	* To execute targeted spot spraying to reduce chemical usage.
+	* To implement low-latency telemetry using Java UDP (DatagramSocket).
+	* To coordinate a swarm of drones using a centralized/distributed control logic.
+	* To utilize Software Design Patterns (State Machine and Strategy) for robust code architecture.
+
+5. PROPOSED METHODOLOGY
+The system operates through a continuous feedback loop:
+
+	1. Detection: The drone camera captures live footage; YOLO processes the frames to identify weeds.
+	2. Localization: Upon detection, the system captures the current GPS coordinate of the weed.
+	3. Navigation: A route optimization algorithm calculates the most efficient path to the target.
+	4. Execution: The drone navigates to the coordinate and triggers the spray actuator.
+
+Drone Control Workflow (State Machine):
+ARM → TAKEOFF → SCAN → SPRAY → RTL (Return to Launch)
+
+6. SYSTEM MODULES
+
+	* Drone Telemetry Module: Manages low-latency communication via UDP.
+	* Weed Detection Module: Handles YOLO inference and OpenCV processing.
+	* Spray Actuator Module: Manages the physical spraying mechanism based on detection triggers.
+	* Route Optimization Module: Calculates efficient GPS-based trajectories.
+	* Swarm Coordination Module: Distributes tasks across multiple drones to prevent overlap.
+
+7. TECHNOLOGIES & JAVA CONCEPTS
+
+| Technology / Concept | Purpose |
+| :--- | :--- |
+| **Java** | Core system development and logic |
+| **YOLO & OpenCV DNN** | Real-time object detection and inference |
+| **UDP / DatagramSocket** | Low-latency drone-to-controller communication |
+| **State Machine Pattern** | Managing drone flight states (Takeoff, Scan, etc.) |
+| **Strategy Pattern** | Switching between "Broadcast" and "Targeted" spraying |
+
+8. EXPECTED OUTCOMES
+
+	* Autonomous, real-time identification of agricultural weeds.
+	* Significant reduction in pesticide consumption through precision spraying.
+	* Improved field coverage speed via swarm intelligence.
+	* A modular, extensible Java-based framework for agricultural robotics.
+
+DELIVERABLE 2: PPT STRUCTURE (8 SLIDES)
+
+	* Slide 1: Title, Name (Tejasri M), Reg No (192511047RC), and Department.
+	* Slide 2: Problem Statement (Labor, Waste, Inefficiency).
+	* Slide 3: Objectives (Detection, Localization, Optimization, Swarm).
+	* Slide 4: Proposed System Architecture (The Detection-to-Spray pipeline).
+	* Slide 5: System Modules (Telemetry, Detection, Actuator).
+	* Slide 6: Java Implementation (State Machine & Strategy Patterns).
+	* Slide 7: Expected Outcomes (Precision, Efficiency, Automation).
+	* Slide 8: Future Scope (Obstacle Avoidance, Cloud Monitoring, Mobile App).
+
+DELIVERABLE 3: INITIAL ARCHITECTURE DIAGRAM
+(Flow: Camera → YOLO/OpenCV → GPS → Route Optimization → UDP Telemetry → Swarm Controller → Individual Drones → Spray Actuator)
