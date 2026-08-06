@@ -1,0 +1,14 @@
+BEGIN
+    NUMBER age
+    NUMBER voting_age = 18
+    NUMBER years_left
+    OUTPUT "Enter your age:"
+    INPUT age
+    IF age >= voting_age THEN
+        OUTPUT "You are eligible to vote."
+    ELSE
+        years_left = voting_age - age
+        OUTPUT "You are not eligible to vote."
+        OUTPUT "Years left to become eligible: ", years_left
+    END IF
+END
