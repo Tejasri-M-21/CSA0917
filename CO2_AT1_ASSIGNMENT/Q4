@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class PalindromeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("PALINDROME CHECK");
+        System.out.println("1. Check Number Palindrome");
+        System.out.println("2. Check String Palindrome");
+        System.out.print("Enter your choice (1/2): ");
+        int choice = sc.nextInt();
+        sc.nextLine(); // consume newline
+        if (choice == 1) {
+            System.out.print("Enter a number: ");
+            long n = sc.nextLong();
+            long original = n;
+            long reversed = 0;
+            while (n > 0) {
+                long digit = n % 10;
+                reversed = reversed * 10 + digit;
+                n = n / 10;
+            }
+            if (original == reversed) {
+                System.out.println(original + " is a palindrome number.");
+            } else {
+                System.out.println(original + " is not a palindrome number.");
+            }
+        } else if (choice == 2) {
+            System.out.print("Enter a string: ");
+            String s = sc.nextLine();
+            String clean = s.replaceAll("\\s+", "").toLowerCase();
+            String reversed = new StringBuilder(clean).reverse().toString();
+            if (clean.equals(reversed)) {
+                System.out.println("The given string is a palindrome.");
+            } else {
+                System.out.println("The given string is not a palindrome.");
+            }
+        } else {
+            System.out.println("Invalid choice. Please enter 1 or 2.");
+        }
+        sc.close();
+    }
+}
