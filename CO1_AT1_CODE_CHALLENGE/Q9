@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int number = 2;
+        System.out.print("In words: ");
+        switch (number) {
+            case 1:
+                System.out.print("One");
+                break;
+            case 2:
+                System.out.print("Two");
+                break;
+            case 3:
+                System.out.print("Three");
+                break;
+        }
+    }
+}
