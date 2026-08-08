@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();  // This will never be null in normal console input
+        if (s != null) {
+            System.out.println("Length: " + s.length());
+        } else {
+            System.out.println("String is null");
+        }
+        sc.close();
+    }
+}
