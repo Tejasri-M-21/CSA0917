@@ -1,8 +1,11 @@
-import java.util.Scanner;
-public class Main {
+public class StringComparison {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int sum = 0;
-        System.out.println("Enter five numbers:");
+        String string1 = "JAVA";
+        String string2 = "JAVA";
+        if (string1.equals(string2)) {
+            System.out.println("The strings are equal.");
+        } else {
+            System.out.println("The strings are not equal.");
+        }
     }
 }
